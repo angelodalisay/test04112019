@@ -16,7 +16,6 @@ export class ApiService {
   createTask(task: Task): Observable<Task>{
     return this.httpClient.post<Task>(`${this.PHP_API_SERVER}/api/create.php`, task);
   }
-
   updateTask(task: Task){
     return this.httpClient.put<Task>(`${this.PHP_API_SERVER}/api/update.php`, task);   
   }
