@@ -20,3 +20,8 @@ npm install npm@latest -g
 ### Install Angular CLI
 ```shell
 npm install -g @angular/cli
+```
+
+### API connect
+Once it works!
+http://127.0.0.1:8888/api/read.php
