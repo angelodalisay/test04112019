@@ -1,0 +1,70 @@
+<div class="container">
+		<div class="row">
+				<div class="col-md-12">
+						<h1>Task List</h1>
+						<table class="table" width='100%' style='border-collapse: collapse;'>
+								<thead>
+									<tr>
+										<th scope="col">Task Name</th>
+										<th scope="col">Task Description</th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+										<tr *ngFor="let task of tasks">
+											<td>{{ task.name }}</td>
+											<td>{{ task.description }}</td>
+										<td>
+											<button type="button" class="btn btn-success" (click)="deleteTask(task.id)">Done</button>
+											&nbsp;
+											<button type="button" class="btn btn-primary" (click)="selectTask(task)">Edit</button>
+										</td>
+									</tr>
+									<tr>
+										<td><button type="button" class="btn btn-dark" (click)="createTaskShow()">Create Task</button></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+				</div>
+			</div>
+			
+			<div class="row">
+					<div class="col-md-12">
+							<div class="card" *ngIf="this.taskshow">
+									<div class="card-header"><h2>Create Task</h2></div>
+									<div class="card-body">
+											<form #f = "ngForm">
+													<div class="form-group">
+															<label for="taskname">Task Name</label>
+															<input class="form-control" type="text" name="name" [(ngModel)] = "selectedTask.name" placeholder="Insert Task Name">
+													</div>
+													<div class="form-group">
+															<label for="taskdescription">Task Description</label>
+															<input class="form-control" type="text" name="description" [(ngModel)] = "selectedTask.description" placeholder="Insert Task Desription">
+													</div>				
+															<button type="button" class="btn btn-primary" (click)="createTask(f)">Submit Task</button>
+												</form>
+									</div>
+								</div>
+								<div class="card" *ngIf="this.editshow">
+										<div class="card-header"><h2>Edit Task</h2></div>
+										<div class="card-body">
+												<form #f = "ngForm">
+														<div class="form-group">
+																<label for="taskname">Task Name</label>
+																<input class="form-control" type="text" name="name" [(ngModel)] = "selectedTask.name" placeholder="Insert Task Name">
+														</div>
+														<div class="form-group">
+																<label for="taskdescription">Task Description</label>
+																<input class="form-control" type="text" name="description" [(ngModel)] = "selectedTask.description" placeholder="Insert Task Desription">
+														</div>				
+																<button type="button" class="btn btn-primary" (click)="updateTask(f)">Update Task</button>
+													</form>
+										</div>
+									</div>
+					</div>
+			</div>
+</div>
+
