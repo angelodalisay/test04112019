@@ -3,7 +3,7 @@
 This is a test project to demonstrate create, read, update, and delete tasks.
 
 ## Get started
-
+Run files either using PHP application on terminal or MAMP
 
 ### Clone the repo
 ```shell
@@ -22,6 +22,18 @@ npm install npm@latest -g
 npm install -g @angular/cli
 ```
 
+### MAMP Settings
+Port 8888
+
+#### PHP Run Settings
+```
+php -S 127.0.0.1:8888 -t ./api/
+```
+### DB Files
+Import database test data into mysql 
+Can be found in api/sql.dat file
+
 ### API connect
 Once it works!
 http://127.0.0.1:8888/api/read.php
+
