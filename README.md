@@ -21,6 +21,7 @@ npm install npm@latest -g
 ```shell
 npm install -g @angular/cli
 ```
+127.0.0.1:4200/dashboard
 
 ### MAMP Settings
 Port 8888

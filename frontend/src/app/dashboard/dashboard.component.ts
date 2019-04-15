@@ -3,6 +3,7 @@ import { ApiService } from '../api.service';
 import { Task } from '../task';
 import { Validators } from '@angular/forms';
 // import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,6 +24,7 @@ export class DashboardComponent implements OnInit {
   createTaskShow() {
     this.taskshow = true;
     this.editshow = false;
+    
   }
   editTaskShow() {
     this.editshow = true;
@@ -66,6 +68,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
       this.fetchData();
+
+      $(document).ready(function(){
+
+    });
   }
 
   fetchData() {
